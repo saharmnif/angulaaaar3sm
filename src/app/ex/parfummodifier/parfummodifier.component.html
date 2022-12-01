@@ -1,0 +1,14 @@
+<div class="container">
+    <h3>Modifier un parfum</h3>
+    <form [formGroup]=" parfumForm" (ngSubmit)="onModifier(id)"   >
+        <label> Donnez le nouveau prix du parfum</label>
+        <input class="form-control" type="text" formControlName="prix"> <br>
+        <label> modifier la date de sortie</label>
+        <input class="form-control"  type="number" formControlName="dats">
+        <label> modifier le stockage du parfum </label>
+        <input class="form-control" type="text" formControlName="enstock"> <br>
+       
+        <button class= "btn btn-success d" >Modifer un parfum </button>
+    </form>
+
+</div>

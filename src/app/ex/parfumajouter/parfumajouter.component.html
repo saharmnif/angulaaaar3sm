@@ -1,0 +1,19 @@
+<div class="container">
+    <h3>Ajouter un parfum</h3>
+    <form [formGroup]=" parfumForm"  (ngSubmit)="addParfum()">
+        <label> Donnez le nom du parfum</label>
+        <input class="form-control" type="text" formControlName="nom"> <br>
+        <label> Donnez le prix du parfum</label>
+        <input class="form-control"  type="number" formControlName="prix">
+        <label> Donnez la marque</label>
+        <input class="form-control" type="text" formControlName="marque"> <br>
+        <label> Donnez la categorie du parfum</label>
+        <input class="form-control" type="text" formControlName="categorie"> <br>
+        <label> Date de sortie</label>
+        <input class="form-control" type="number" formControlName="dats"> <br>
+        <button class= "btn btn-success d" >Ajouter Parfum</button>
+    </form>
+
+</div>
+
+

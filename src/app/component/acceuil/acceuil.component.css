@@ -1,0 +1,33 @@
+.d { 
+    margin-left: 190px;
+    height: 300px;
+    width:1200px;
+     margin-top: 150px; 
+    background-color:rgb(242, 225, 238);
+    border-top-right-radius: 125px;
+    border-top-left-radius: 125px;
+    border-bottom-left-radius: 125px;
+    border-bottom-right-radius: 125px;
+    background-image: url('fond22.jpg');
+}
+
+h1{
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+}
+h4{  font-style: italic;
+    font-family:'Times New Roman', Times, serif; margin-left: 200px; color: rgb(116, 85, 148);}
+.l{
+    margin-left: 550px;
+}
+
+
+ .c{
+    margin-left: 20px;
+    height: 30px;
+    width:1155px;
+    margin-top: 153px;
+ }
+ 
+
+ 
