@@ -21,5 +21,7 @@ export class ListparfumComponent implements OnInit {
     this.lesParfums$=this.pfn.getParfum();
       
 }
-
+oncommander(){
+  alert('produit ajouté au panier!')
+}
 }

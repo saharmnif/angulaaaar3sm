@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthguardGuard } from '../authguard.guard';
 import { AuthetifierComponent } from './authetifier/authetifier.component';
 import { DashboardadminComponent } from './dashboardadmin/dashboardadmin.component';
 import { HomeComponent } from './home/home.component';
@@ -9,6 +10,7 @@ import { NosparfumComponent } from './nosparfum/nosparfum.component';
 const routes: Routes = [
   
   { path:'admin',
+//  canActivate:[AuthguardGuard],
   children:[ 
     {path:'', redirectTo:'login', pathMatch:'full'},
     {path:'login', component: AuthetifierComponent},  

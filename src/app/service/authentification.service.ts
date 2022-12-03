@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { observable, Observable } from 'rxjs';
 import { Admin } from '../Model/admin';
 
-const URL2='http://localhost:3400/Admin';
+const URL='http://localhost:3400/Admin';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,20 @@ const URL2='http://localhost:3400/Admin';
 export class AuthentificationService {
 
   admin!:Admin;
-  constructor(private http :HttpClient) { }
+  role='autre';
+  constructor(private http :HttpClient, private router:Router ) { }
+    loginauth(login:string , pwd:string){
+  if (login=="molkaetsahar" && pwd=="projet"){
+       this.role="admin";
+   }
+     else this.role="autre";
+    return this.role;
+   }
 
   login(login:string , pwd :string ):Observable<Admin[]>{
-    return this.http.get<Admin[]>(URL2+"?login"+login+"&pwd="+pwd) ;}
+    return this.http.get<Admin[]>(URL+"?login="+login+"&pwd="+pwd) ;}
   getAdmin():Observable<Admin[]> {
-    return this.http.get<Admin[]>(URL2);
+    return this.http.get<Admin[]>(URL);
 
   }
 

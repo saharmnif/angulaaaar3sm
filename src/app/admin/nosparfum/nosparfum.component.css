@@ -24,3 +24,5 @@ ul li { list-style-type: none;}
 .p {
     margin-left: 700px;
 }
+.back{
+    background-image: url('fond22.jpg'); height: 1800px;  width:1350px; margin-left: 70px; }

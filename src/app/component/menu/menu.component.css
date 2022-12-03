@@ -13,13 +13,10 @@ nav {
 height: 80px;
 width:100px}
 
-.m{ 
-    width:1550px;}
+.m{  width:1500px;}
 
 
-    .f{
-        margin-left:20px;
-    }
+.f{margin-left:20px; }
 
     .btn-warning{ background-color:  rgb(242, 225, 238); border-color: rgb(242, 225, 238);}
 

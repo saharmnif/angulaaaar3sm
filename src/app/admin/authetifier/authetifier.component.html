@@ -1,14 +1,13 @@
 <div class="container">
     <h3>Athentification au site </h3>
-    <form  >
+    <form   [formGroup]="loginForm"    (ngSubmit)="onSubmit()"> 
+
+        <div *ngIf="message"> {{message}}</div>
         <label> Donnez  votre login</label>
-        <input class="form-control" type="text" formControlName=""> <br>
+        <input class="form-control" type="text" formControlName="login"> <br>
         <label> Donnez votre mot de passe </label>
-        <input class="form-control"  type="textr" formControlName="">
-        <label> verifier mot de passe</label>
-        <input class="form-control" type="text" formControlName=""> <br>
-       
-        <button class= "btn btn-success m" routerLink="/nosparfum" >connecter</button>
+        <input class="form-control"  type="textr" formControlName="password">
+        <button class= "btn btn-success m"  [disabled]="loginForm.invalid">connecter</button>
     </form>
 
 </div>

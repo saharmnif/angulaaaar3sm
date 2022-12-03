@@ -19,5 +19,7 @@ ul li { list-style-type: none;}
 }
 .btn-info{ background-color: rgb(121, 186, 211); border-color: rgb(121, 186, 211); }
  .btn-success{   background-color: rgb(238, 208, 230); border-color: rgb(238, 208, 230); }
+ .back{
+    background-image: url('fond22.jpg'); height: 1850px;  width:1350px; margin-left: 70px; }
 
    

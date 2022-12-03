@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -12,14 +13,15 @@ import { ParfumService } from 'src/app/service/parfum.service';
 })
 export class ParfummodifierComponent implements OnInit {
   parfumForm!:FormGroup;
-
-  
-
-  constructor(private activatedRoute:ActivatedRoute ,private pfn: ParfumService , private formBuilder:FormBuilder) { }
+  ap!:Parfum[];
   identifiant : number;
   id:number;
   lesParfums$:Observable<Parfum []>;
-  ap!:Parfum[];
+  
+
+  constructor(private activatedRoute:ActivatedRoute ,private pfn: ParfumService , private formBuilder:FormBuilder ,private http:HttpClient) { }
+ 
+
   ngOnInit(): void {
 
     
@@ -30,10 +32,11 @@ export class ParfummodifierComponent implements OnInit {
       enstock :[''],
     })
    
-    
+    this.pfn.getParfum().subscribe (data => this.ap = data)
   }
   
   onModifier(id:number){
+   
     this.pfn.updateParfum(id, this.parfumForm.value).subscribe(data => console.log(data));
     }
     

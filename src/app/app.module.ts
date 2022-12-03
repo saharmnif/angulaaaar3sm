@@ -8,7 +8,7 @@ import { HttpClientModule} from'@angular/common/http';
 import { ErreurComponent } from './component/erreur/erreur.component';
 import { InscrireComponent } from './component/inscrire/inscrire.component';
 import { SelectedparfumComponent } from './ex/selectedparfum/selectedparfum.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ParfumajouterComponent } from './ex/parfumajouter/parfumajouter.component';
 import { ParfummodifierComponent } from './ex/parfummodifier/parfummodifier.component';
 import { ParfumsupprimerComponent } from './ex/parfumsupprimer/parfumsupprimer.component';
@@ -16,6 +16,7 @@ import { AproposdenousComponent } from './ex/aproposdenous/aproposdenous.compone
 import { ListparfumComponent } from './component/listparfum/listparfum.component';
 import { NomsmPipe } from './nomsm.pipe';
 import { AdminModule } from './admin/admin.module';
+import { SearchComponent } from './component/search/search.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { AdminModule } from './admin/admin.module';
        AproposdenousComponent,
        ListparfumComponent,
        NomsmPipe,
+       SearchComponent,
   
      
   ],
@@ -44,6 +46,7 @@ import { AdminModule } from './admin/admin.module';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule
     
   ],
   providers: [],

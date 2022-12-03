@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Admin } from 'src/app/Model/admin';
 import { AuthentificationService } from 'src/app/service/authentification.service';
@@ -11,17 +12,35 @@ import { AuthentificationService } from 'src/app/service/authentification.servic
 })
 export class AuthetifierComponent implements OnInit {
   tabadmin$:Observable<Admin[]>;
-  loginForm:FormBuilder;
-  n:any;
-  constructor( private A: AuthentificationService , private fb : FormBuilder ) { }
+  loginForm!:FormGroup;
+  message:String="";
+
+  constructor( private A: AuthentificationService , private fb : FormBuilder  , private router:Router ) { }
   
   ngOnInit(): void {
+    this.loginForm = this.fb.nonNullable.group({
+      login:['', Validators.required],
+      password:['', Validators.required]
+    })
+    
+    
+    
     this.tabadmin$=this.A. getAdmin();
-    // this.loginForm= this.fb.nonNullable.group({
-    //   login : ["",Validators.required], pwd : ["",Validators.required] ;
-    // })
+  
  
       
 }
+onSubmit(){
+    this.A.login(this.loginForm.value['login'] ,this.loginForm.value ['password']).subscribe(
+      Admin=>{
+        if (Admin.length=0){
+          this.message="echec";
+          this.loginForm.reset();
+        }
+        else 
+        this.router.navigate(['admin/dashboard']);
+      }
+    )
+} 
 
 }

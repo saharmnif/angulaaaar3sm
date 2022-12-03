@@ -1,4 +1,5 @@
 <app-menu></app-menu>
+<div class="back">
 <div class="divg" >
     <h2 class="title" style="padding-left : 22px ; color: black" > Liste des parfums</h2>
     
@@ -10,7 +11,7 @@
     <h4  class="card-title v"> {{p.nom |nomsm }}</h4>
     <p class="card-title"> Prix:{{ p.prix | currency }} </p>
     <span class="badge text-bg-warning m-4" ></span>
-    <span class="btn btn-success btn-sm m-4" > Commander</span>
+    <span class="btn btn-success btn-sm m-4" (click)="oncommander()" > Commander</span>
     <button  type="button" class=" btn btn-info btn-sm container" [routerLink] = "['/listparfum',p.id]"> Details</button>
     
     
@@ -19,4 +20,5 @@
     </ul>
     </div>
     </div> <br/>
+    </div>
     
