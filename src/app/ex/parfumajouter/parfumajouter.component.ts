@@ -32,5 +32,6 @@ export class ParfumajouterComponent implements OnInit {
     
   }
   addParfum(){
-  this.pfn.addParfum(this.parfumForm.value).subscribe (data=> this.ap.push(data));}
+  this.pfn.addParfum(this.parfumForm.value).subscribe (data=> this.ap.push(data));
+}
 }

@@ -25,7 +25,7 @@ export class AuthetifierComponent implements OnInit {
     
     
     
-    this.tabadmin$=this.A. getAdmin();
+    this.tabadmin$=this.A.getAdmin();
   
  
       

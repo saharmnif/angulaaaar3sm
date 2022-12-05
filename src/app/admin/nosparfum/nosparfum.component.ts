@@ -22,7 +22,9 @@ export class NosparfumComponent implements OnInit {
 }
 
 onSupprimer(id:number){
-  this.pfn.deleteParfum(id) .subscribe();
+  this.pfn.deleteParfum(id).subscribe();
+  this.lesParfums$=this.pfn.getParfum();
+
   }
   onModifier(id:number){
     this.pfn.updateParfum(id, this.parfumForm.value).subscribe(data => console.log(data));

@@ -1,61 +1,6 @@
 {
   "Parfum": [
     {
-      "id": 22,
-      "nom": "libre",
-      "photo": "assets/libre.jpg",
-      "prix": 98.25,
-      "enstock": true,
-      "dats": 2018,
-      "categorie": "femme",
-      "typeparfum": "eau de parfum",
-      "marque": "yves saint laurent"
-    },
-    {
-      "id": 44,
-      "nom": "la nuit de l'homme",
-      "photo": "assets/la nuit de l'homme.jpg",
-      "prix": 98,
-      "enstock": false,
-      "dats": 2006,
-      "categorie": "homme",
-      "typeparfum": "eau de parfum",
-      "marque": "yves saint laurent"
-    },
-    {
-      "id": 66,
-      "nom": "you",
-      "photo": "assets/you.jpg",
-      "prix": 65,
-      "enstock": true,
-      "dats": 2017,
-      "categorie": "femme",
-      "typeparfum": "eau de parfum",
-      "marque": "armani"
-    },
-    {
-      "id": 88,
-      "nom": "armani code",
-      "photo": "assets/armani-code.jpg",
-      "prix": 70,
-      "enstock": true,
-      "dats": 2021,
-      "categorie": "homme",
-      "typeparfum": "eau de toilette",
-      "marque": "armani"
-    },
-    {
-      "id": 100,
-      "nom": "chance",
-      "photo": "assets/chance.jpg",
-      "prix": 80,
-      "enstock": false,
-      "dats": 2003,
-      "categorie": "femme",
-      "typeparfum": "eau de parfum",
-      "marque": "chanel"
-    },
-    {
       "id": 122,
       "nom": "blue de chanel",
       "photo": "assets/bleu de chanel.jpg",
@@ -175,6 +120,14 @@
       "categorie": "homme",
       "typeparfum": "eau de parfum",
       "marque": "Tom ford"
+    },
+    {
+      "nom": "test",
+      "prix": 432,
+      "marque": "test",
+      "categorie": "test",
+      "dats": "2023-02-16",
+      "id": 323
     }
   ]
 }

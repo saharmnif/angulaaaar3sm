@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, observable } from 'rxjs';
 import { Parfum } from '../Model/parfum';
-const URL ='http://localhost:3000/Parfum';
+const URL ='http://localhost:3700/Parfum';
 @Injectable({
   providedIn: 'root'
 })
@@ -25,9 +25,9 @@ export class ParfumService {
     updateParfum(id:number, p:Parfum):Observable<Parfum>{
       return this.http.put<Parfum>(URL+"/"+ id, p);
       }
-      deleteParfum(id:number){
-        return this.http.delete(URL+"/"+ id);
-        }
+    deleteParfum(id:number):Observable<Parfum>{
+      return this.http.delete<Parfum>(URL+"/"+ id);
+      }
         
       
  

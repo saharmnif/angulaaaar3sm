@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { observable, Observable } from 'rxjs';
 import { Admin } from '../Model/admin';
 
-const URL='http://localhost:3400/Admin';
+const URL='http://localhost:3000/Admin';
 
 @Injectable({
   providedIn: 'root'

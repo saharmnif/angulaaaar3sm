@@ -27,7 +27,7 @@ export class ParfummodifierComponent implements OnInit {
     
     
     this.parfumForm = this.formBuilder.nonNullable.group({
-      prix:[0],
+      prix:[],
       dats:[''],
       enstock :[''],
     })
